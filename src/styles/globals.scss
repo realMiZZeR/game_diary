@@ -1,0 +1,42 @@
+// mixins
+@import './mixins/font';
+
+// fonts
+@import './fonts/montserrat.scss';
+
+// global selectors
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  @include font($montserrat, 400);
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+} 
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  flex: 0 0 auto;
+}
+
+.main {
+  flex: 0 1 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
