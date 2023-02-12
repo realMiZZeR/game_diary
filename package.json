@@ -1,5 +1,9 @@
 {
   "name": "game_diary",
+  "author": {
+    "email": "maxcan2work@gmail.com",
+    "name": "Maxim Nikolaev"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {

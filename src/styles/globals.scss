@@ -4,12 +4,14 @@
 // fonts
 @import './fonts/montserrat.scss';
 
+// others
+@import './reset.css';
+
 // global selectors
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  @include font($montserrat, 400);
 }
 
 html,
@@ -18,9 +20,15 @@ body {
   height: 100%;
 } 
 
+html {
+  font-size: 16px;
+  @include font($montserrat, 400);
+}
+
 body {
   margin: 0;
   padding: 0;
+  background: radial-gradient(90.37% 131.6% at 91.64% 9.63%, rgba(117, 17, 119, 0.2) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(45.31% 143.21% at 11.69% 87.82%, rgba(29, 60, 169, 0.2) 0%, rgba(0, 0, 0, 0) 100%), #19181F;
 }
 
 #__next {

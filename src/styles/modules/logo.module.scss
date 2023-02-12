@@ -1,0 +1,72 @@
+.wrapper {
+  position: relative;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 8rem;
+  line-height: 151px;
+  text-transform: uppercase;
+}
+
+.diary {
+  display: block;
+  position: relative;
+  left: -30px;
+  color: transparent;
+  -webkit-text-stroke: 1px #FFF;
+  animation: appear forwards 1s;
+  @extend %appear-start;
+}
+
+.diary strong {
+  display: inline-block;
+  transform-origin: 3% 50%;
+  animation: toffeeLetter forwards 1s;
+}
+
+@keyframes toffeeLetter {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scaleX(4);
+    width: 290px;
+  }
+}
+
+.gamer {
+  position: relative;
+  top: -45px; right: -250px;
+  color: #FFF;
+  animation: appear forwards 1s;
+  animation-delay: 1s;
+  @extend %appear-start;
+}
+
+.gamer span:not(:first-child) {
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke: 1px #FFF;
+  transform: translateY(-20px);
+  animation: appearSpan ease 1.5s forwards;
+  opacity: 0;
+}
+
+@keyframes appearSpan {
+  100% {
+    transform: translateY(0);
+    
+  }
+}
+
+@keyframes appear {
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+%appear-start {
+  transform: translateY(-20px);
+  opacity: 0;
+}
